@@ -10,14 +10,14 @@
     <li>Clona el repositorio:</li>
     <pre><code>git clone https://github.com/Julicode07/FrontendProjects.git</code></pre>
 
-    <li>Accede a la carpeta del proyecto:</li>
+<li>Accede a la carpeta del proyecto:</li>
     <pre><code>cd FrontendProjects</code></pre>
 
-    <li>Entra en la carpeta que necesites, ya sea la web principal o uno de los proyectos individuales:</li>
+<li>Entra en la carpeta que necesites, ya sea la web principal o uno de los proyectos individuales:</li>
     <pre><code>cd web  # Para la página principal</code></pre>
     <pre><code>cd Projects/nombre-del-proyecto  # Para un proyecto específico</code></pre>
 
-    <li>Instala las dependencias necesarias:</li>
+<li>Instala las dependencias necesarias:</li>
     <pre><code>npm install</code></pre>
 </ol>
 
@@ -55,3 +55,10 @@
     <li>Sube los cambios a tu fork y abre un pull request.</li>
 </ol>
 
+<h2>🌎 Despliegue</h2>
+<p>
+    Puedes ver la versión en vivo de este proyecto en el siguiente enlace:
+</p>
+<p>
+    🔗 <a href="https://frontend-projects-coral.vercel.app/" target="_blank">Frontend Projects - Demo</a>
+</p>
