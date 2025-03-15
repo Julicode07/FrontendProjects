@@ -4,7 +4,7 @@ import TechStack from "./TechStack";
 const Texto = () => {
     return (
         <section
-            className="relative h-screen w-screen overflow-hidden flex justify-center items-center"
+            className="relative w-screen py-20 md:pt-20 md:pb-18 overflow-hidden flex justify-center items-center"
         >
             <div className="flex flex-col gap-4 md:gap-4 items-center justify-center w-full md:max-w-9/12">
                 <motion.a
@@ -12,7 +12,7 @@ const Texto = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: .1 }}
-                    class="flex items-center justify-center gap-2 px-6 py-2 bg-gradient-to-r from-purple-900 to-indigo-800 rounded-full text-white font-medium text-sm mb-2 shadow-xl cursor-pointer">
+                    className="flex items-center justify-center gap-2 px-6 py-2 bg-gradient-to-r from-purple-900 to-indigo-800 rounded-full text-white font-medium text-sm mb-2 shadow-xl cursor-pointer">
                     <span className="font-bold">JuliCode07</span>
                     <svg
                         viewBox="0 0 256 250"
@@ -50,7 +50,7 @@ const Texto = () => {
                     className="flex flex-col md:flex-row gap-4 items-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
                     <a
                         href="https://github.com/Julicode07/FrontendProjects"
@@ -82,7 +82,6 @@ const Texto = () => {
                         </svg>
                     </a>
                 </motion.div>
-
             </div>
         </section>
     );
