@@ -14,17 +14,20 @@ import { ViewTransitions } from "astro:transitions";
 			name="description"
 			content="Explora mi portafolio de proyectos frontend, desarrollados con HTML, CSS y JavaScript. Descubre mis creaciones y habilidades en desarrollo web."
 		/>
+		<!-- Preload Remixicon -->
 		<link
+			rel="preload"
 			href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-			rel="stylesheet"
-			media="print"
-			onload="this.media='all'"
-			disabled
+			as="style"
 		/>
-		<ViewTransitions />
-		<style>
-			@import "tailwindcss";
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+		/>
 
+		<ViewTransitions />
+
+		<style>
 			/* SATOSHI - FONTSHARE.COM */
 			@font-face {
 				font-family: "Satoshi";
@@ -66,10 +69,18 @@ import { ViewTransitions } from "astro:transitions";
 				font-display: swap;
 			}
 
-			body {
+			/* Estilos generales */
+			* {
+				box-sizing: border-box;
 				margin: 0;
 				padding: 0;
-				box-sizing: border-box;
+			}
+
+			html {
+				scroll-behavior: smooth !important;
+			}
+
+			body {
 				font-family: "Satoshi", sans-serif;
 				width: 100vw;
 				height: 100dvh;
@@ -80,13 +91,27 @@ import { ViewTransitions } from "astro:transitions";
 					#000 90%
 				) !important;
 			}
-			html {
-				scroll-behavior: smooth !important;
-				scroll-margin-top: 100px !important;
+
+			/* Ajuste para loader */
+			#loader-container {
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #000;
+				z-index: 9999;
+				transition: opacity 0.5s ease-out;
 			}
 
-			#projects {
-				scroll-margin-top: 100px !important;
+			#loader-container.fade-out {
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			.hidden {
+				display: none;
 			}
 		</style>
 	</head>
@@ -100,17 +125,20 @@ import { ViewTransitions } from "astro:transitions";
 		</main>
 
 		<script>
-			window.addEventListener("load", () => {
-				document
-					.getElementById("loader-container")
-					.classList.add("fade-out");
-				setTimeout(() => {
-					document.getElementById("loader-container").style.display =
-						"none";
-					document
-						.getElementById("content")
-						.classList.remove("hidden");
-				}, 200);
+			window.addEventListener("pageshow", () => {
+				const loader = document.getElementById("loader-container");
+				const content = document.getElementById("content");
+
+				if (loader) {
+					loader.classList.add("fade-out");
+					setTimeout(() => {
+						loader.style.visibility = "hidden";
+					}, 200);
+				}
+
+				if (content) {
+					content.classList.remove("hidden");
+				}
 			});
 		</script>
 	</body>
