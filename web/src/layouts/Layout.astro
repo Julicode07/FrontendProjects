@@ -1,24 +1,117 @@
 ---
+import Loader from "@/Loader/Loader";
 import { ViewTransitions } from "astro:transitions";
-import "../styles.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>Frontend Projects</title>
-		<link rel="stylesheet" href="/styles.css" />
+		<meta
+			name="description"
+			content="Explora mi portafolio de proyectos frontend, desarrollados con HTML, CSS y JavaScript. Descubre mis creaciones y habilidades en desarrollo web."
+		/>
 		<link
 			href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
 			rel="stylesheet"
+			media="print"
+			onload="this.media='all'"
+			disabled
 		/>
 		<ViewTransitions />
+		<style>
+			@import "tailwindcss";
+
+			/* SATOSHI - FONTSHARE.COM */
+			@font-face {
+				font-family: "Satoshi";
+				src: url("/font/Satoshi-Light.woff") format("woff");
+				font-weight: 300;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "Satoshi";
+				src: url("/font/Satoshi-Regular.woff") format("woff");
+				font-weight: 400;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "Satoshi";
+				src: url("/font/Satoshi-Medium.woff") format("woff");
+				font-weight: 500;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "Satoshi";
+				src: url("/font/Satoshi-Bold.woff") format("woff");
+				font-weight: 700;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "Satoshi";
+				src: url("/font/Satoshi-Black.woff") format("woff");
+				font-weight: 900;
+				font-style: normal;
+				font-display: swap;
+			}
+
+			body {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: "Satoshi", sans-serif;
+				width: 100vw;
+				height: 100dvh;
+				background: radial-gradient(
+					130% 130% at 50% 20%,
+					#2e1065 10%,
+					#0f172a 50%,
+					#000 90%
+				) !important;
+			}
+			html {
+				scroll-behavior: smooth !important;
+				scroll-margin-top: 100px !important;
+			}
+
+			#projects {
+				scroll-margin-top: 100px !important;
+			}
+		</style>
 	</head>
 	<body>
-		<slot />
+		<div id="loader-container">
+			<Loader />
+		</div>
+
+		<main id="content" class="hidden">
+			<slot />
+		</main>
+
+		<script>
+			window.addEventListener("load", () => {
+				document
+					.getElementById("loader-container")
+					.classList.add("fade-out");
+				setTimeout(() => {
+					document.getElementById("loader-container").style.display =
+						"none";
+					document
+						.getElementById("content")
+						.classList.remove("hidden");
+				}, 200);
+			});
+		</script>
 	</body>
 </html>

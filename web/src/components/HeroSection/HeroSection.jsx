@@ -34,7 +34,7 @@ const Texto = () => {
                     transition={{ duration: .1, delay: 0.1 }}
                     className="text-4xl md:text-6xl text-white text-center font-black"
                 >
-                    Frontend Practice Projects
+                    Frontend Projects
                 </motion.h1>
 
                 <motion.p
@@ -42,7 +42,7 @@ const Texto = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
                     className="text-base md:text-xl text-slate-200 text-center font-medium tracking-wide text-pretty px-4 w-11/12 md:w-10/12"
-                >Welcome to my project showcase! This is where I upload and share my frontend practice projects built with HTML, CSS, and JavaScript.</motion.p>
+                >Welcome to my project showcase! This is where I upload and share my frontend projects built with HTML, CSS, and JavaScript.</motion.p>
                 <div className="w-full flex justify-center items-center px-6">
                     <TechStack />
                 </div>
@@ -53,9 +53,7 @@ const Texto = () => {
                     transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
                 >
                     <a
-                        href="https://github.com/Julicode07/FrontendProjects"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#projects"
                         className="flex gap-2 bg-white text-black border border-gray-600 text-base font-semibold py-2 px-4 rounded-full group w-48 h-12 justify-center items-center"
                     >
                         <span>View Projects</span>
