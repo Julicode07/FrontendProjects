@@ -4,7 +4,7 @@ import TechStack from "./TechStack";
 const Texto = () => {
     return (
         <section
-            className="relative w-screen py-20 md:pt-20 md:pb-18 overflow-hidden flex justify-center items-center"
+            className="relative w-screen py-20 md:pt-18 md:pb-6 overflow-hidden flex justify-center items-center"
         >
             <div className="flex flex-col gap-4 md:gap-4 items-center justify-center w-full md:max-w-9/12">
                 <motion.a
@@ -41,7 +41,7 @@ const Texto = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1 }}
-                    className="text-base md:text-xl text-slate-200 text-center font-medium tracking-wide text-pretty px-4 w-11/12 md:w-10/12"
+                    className="text-base md:text-lg text-slate-200 text-center font-medium tracking-wide text-pretty px-4 w-11/12 md:w-9/12"
                 >Welcome to my project showcase! This is where I upload and share my frontend projects built with HTML, CSS, and JavaScript.</motion.p>
                 <div className="w-full flex justify-center items-center px-6">
                     <TechStack />
