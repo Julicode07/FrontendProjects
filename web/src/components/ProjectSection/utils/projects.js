@@ -1,3 +1,5 @@
+import { title } from "framer-motion/client";
+
 export const projects = {
     practiceProjects: [
         {
@@ -35,11 +37,12 @@ export const projects = {
 
     clientProjects: [
         {
-            id: 5,
-            name: "E-commerce",
-            description: "Tienda en línea con carrito de compras.",
+            id: 1,
+            name: "Ofertas Marly",
+            description: "Descubre increíbles ofertas en artículos para el hogar y cuidado personal. Productos de calidad, precios irresistibles y todo lo que necesitas para hacer tu día a día más cómodo.",
             stack: ["React", "Tailwind", "Framer Motion"],
-            link: "https://github.com/ManuGarciaDev/Portfolio"
+            url: "https://ofertas-marly.vercel.app/",
+            link: "https://github.com/Julicode07/OfertasMarly"
         },
 
         {
