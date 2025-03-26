@@ -6,7 +6,7 @@ export const projects = {
             id: 1,
             name: "Amaga Quiz",
             repoName: "amaga-quiz",
-            description: "Quiz interactivo sobre Amagá, un municipio con gran historia y cultura. Desarrollado con React, Vite y Tailwind CSS, permite a los usuarios responder preguntas aleatorias sobre la región y recibir una puntuación al final.",
+            description: "Quiz interactivo sobre Amagá, un municipio con gran historia y cultura. Permite a los usuarios responder preguntas aleatorias sobre la región y recibir una puntuación al final.",
             stack: ["React", "TypeScript", "Tailwind", "Framer Motion"],
             url: "https://amaga-quiz.vercel.app/",
             link: "https://github.com/Julicode07/amaga-quiz"
@@ -20,7 +20,15 @@ export const projects = {
             url: "https://practica-astro5.vercel.app/",
             link: "https://github.com/Julicode07/PracticaAstro5"
         },
-
+        {
+            id: 3,
+            name: "Youtube Clone",
+            repoName: "YoutubeClone",
+            description: "Proyecto de práctica para mejorar habilidades en el desarrollo front-end e integración de APIs. Utiliza la YouTube Data API para obtener videos en tiempo real,",
+            stack: ["Astro", "Tailwind", "Youtube API"],
+            url: "https://youtube-clone-sigma-rust.vercel.app/",
+            link: "https://github.com/Julicode07/YoutubeClone"
+        },
     ],
 
     clientProjects: [

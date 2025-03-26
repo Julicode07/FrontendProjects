@@ -75,7 +75,8 @@ export default function TabsProjects() {
                                             <i className="ri-arrow-right-line"></i>
                                         </a>
                                         <a
-                                            href=""
+                                            href={project.link}
+                                            target="_blank"
                                             className="flex gap-2 bg-white text-black text-sm font-semibold py-1 px-3 rounded-full group w-36 h-8 justify-center items-center"
                                         >
                                             <span>Source Code</span>
