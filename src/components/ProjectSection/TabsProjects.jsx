@@ -68,15 +68,19 @@ export default function TabsProjects() {
                                     {/* Buttons */}
                                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4">
                                         <a
-                                            href=""
-                                            className="flex gap-2 bg-black text-white text-sm font-semibold py-1 px-3 rounded-full group w-32 h-8 justify-center items-center"
+                                            href={project.url}
+                                            target="_blank"
+                                            aria-label={`Live demo of ${project.name}`}
+                                            className="flex gap-2 bg-slate-900 text-white text-sm font-semibold py-1 px-3 rounded-full group w-32 h-8 justify-center items-center"
                                         >
-                                            <span>Live Demo</span>
+                                            <span className="text-nowrap">View Project</span>
                                             <i className="ri-arrow-right-line"></i>
                                         </a>
+
                                         <a
                                             href={project.link}
                                             target="_blank"
+                                            aria-label={`Source code of ${project.name}`}
                                             className="flex gap-2 bg-white text-black text-sm font-semibold py-1 px-3 rounded-full group w-36 h-8 justify-center items-center"
                                         >
                                             <span>Source Code</span>
