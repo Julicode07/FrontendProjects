@@ -68,7 +68,7 @@ export default function TabsProjects() {
                                     {/* Buttons */}
                                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-4">
                                         <a
-                                            href=""
+                                            href={project.url}
                                             className="flex gap-2 bg-black text-white text-sm font-semibold py-1 px-3 rounded-full group w-32 h-8 justify-center items-center"
                                         >
                                             <span>Live Demo</span>
@@ -113,14 +113,14 @@ export default function TabsProjects() {
                                 <LastUpdate repoName={project.repoName} />
                                 <div className="flex justify-between gap-2 sm:hidden">
                                     <a
-                                        href=""
+                                        href={project.url}
                                         className="flex gap-2 bg-black text-white text-sm font-semibold py-1 px-3 rounded-full group w-full h-8 justify-center items-center"
                                     >
                                         <span>Live Demo</span>
                                         <i className="ri-arrow-right-line"></i>
                                     </a>
                                     <a
-                                        href=""
+                                        href={project.link}
                                         className="flex gap-2 bg-white text-black text-sm font-semibold py-1 px-3 rounded-full group w-full h-8 justify-center items-center"
                                     >
                                         <span>Source Code</span>
